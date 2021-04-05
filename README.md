@@ -1,20 +1,18 @@
-# Affinity2Vec Method
-Drug-target binding affinity prediction using representation learning, graph mining, and machine learning
+# Affinity2Vec: Drug-Target Binding Affinity Prediction Method Developed using Representation Learning, Graph Mining, and Machine Learning Techniques
 
  
 #### This repositery provides an implementation of Affinity2Vec tool which is described in a research paper:
 (Published in ... 2021):
 
-> Affinity2Vec+: a regression-based and network-bbased method to predict Drug-Target binding affinity using representation learning, graph mining, and machine learning
-# DTiGEMS+: Compuational Method for Drug-Target Interactions Prediction using Graph Embedding, Graph Mining, and Similarity-based Techniques
+> Affinity2Vec+ is a regression-based and network-bbased.
 
-Received: 10 December 2019                                      
-Accepted: 16 June 2020              
-Published: 29 June 2020
+Received: 15 April 2021                                      
+Accepted:               
+Published: 
 
 
 ----
-This code is implemented using Python 2.7.9, but since Python 2.7 will no longer supported after January 2020, It is upgraded to be run using Python 3.6
+This code is implemented using Python 3.8.
 
 For any qutions please contact the first author:
 
@@ -32,11 +30,13 @@ Computer, Electrical and Mathematical Sciences and Engineering Division (CEMSE),
 ### Prerequisites:
 
 There are several required Python packages to run the code:
-- gensim (for node2vec code)
+- gensim
 - numpy
 - Scikit-learn
-- imblearn
-- pandas
+- keras
+- deepchem
+- protVec
+- xgboost
 
 These packages can be installed using pip or conda as the follwoing example
 ```
@@ -48,38 +48,29 @@ pip install -r requirements.txt
 #### *There are Three folders:*
 
   **1.Input folder:** 
-  that includes four folder for 4 datasets include: 
-   - Nuclear Receptor dataset (nr),
-   - G-protein-coupled receptor (gpcr),
-   - Ion Channel (IC), 
-   - Enzyme (e)
-     which each one of them has all required data of drug-target interactions (in Adjacency matrix and edgelist format) and drug-drug and target-target similarities in (square matrix format) - all matrices include items names.
+  that includes two folder for 2 datasets include: 
+   - Davis dataset,
+   - KIBA dataset
+     which each one of them has all required data of drug-target binding affinity (in Adjacency matrix format), drug-drug and target-target similarities in (square matrix format), the drugs' SMILES in dictionary format with drugs' IDs, and the proteins' amino-acid sequences in dictionary format with proteins' IDs
   
   **2.Embedding folder:**
-  that has also four folders coressponding for four datasets,
-     each folder contains the generated node2vec embeddings files for each fold of training data
-     
-  **3.Novel_DTIs folder:**
-  that has also four folders coressponding for four datasets, 
-     to write the novel DTIs (you should create directory for each dataset)
+  that has also two folders coressponding for two datasets,
+     each folder contains the generated seq2seq embeddings for drugs, and generated ProtVec embeddings for proteins. 
   
 ---
-#### *There are 10 files:*
-(Four main functions, one main for each dataset, and the other functions are same for all datasets which are imported in each main function)
+#### *There are 8 files:*
+(two main functions, one main for each dataset, and the other functions are same for all datasets which are imported in each main function)
 
-- **load_datasets.py** --> to read the input data including interactions and similarities
-- **get_Embedding_FV.py** --> to read the node2vec generated embedding and get the FV for each drug and target (CV random seed=22)
+- **load_datasets.py** -->  read the input data including binding affinityies, SMILES, Sequences, and similarities
 - **training_functions.py** --> for several training and processing functions such as edgeList, Cosine_similarity, ..
 - **pathScores.py** --> to calculate and return all path scores for 6 path structures
-- **snf_code.py** --> Similarity Network Fusion functions
-- **GIP.py** --> to calculate and return gussian interaction profile similarity
+- **evaluation.py** --> define all evalution metrics used in our experments.
+
 
 - **Four main functions**
 one for each dataset:
 > - DTIs_Main_nr.py
 > - DTIs_Main_gpcr.py
-> - DTIs_Main_ic.py
-> - DTIs_Main_enzyme.py
 
 ---
 ## Installing:
@@ -93,17 +84,12 @@ python DTIs_Main_nr.py --data nr
 ```
 python DTIs_Main_gpcr.py --data gpcr
 ```
-```
-python DTIs_Main_ic.py --data ic
-```
-```
-python DTIs_Main_e.py --data e
-```
+
 
 ------------------
 ### For citation:
 ---
-Thafar, M.A., Olayan, R.S., Ashoor, H. et al. DTiGEMS+: drug–target interaction prediction using graph embedding, graph mining, and similarity-based techniques. J Cheminform 12, 44 (2020). https://doi.org/10.1186/s13321-020-00447-2
+Thafar, M.A., 
 
 
 
