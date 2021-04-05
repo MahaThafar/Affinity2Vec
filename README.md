@@ -2,7 +2,6 @@
 
  
 #### This repositery provides an implementation of Affinity2Vec tool which is described in a research paper:
-(Published in ... 2021):
 
 > Affinity2Vec+ is a regression-based and network-bbased.
 
