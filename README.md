@@ -7,8 +7,99 @@ Drug-target binding affinity prediction using representation learning, graph min
 
 > Affinity2Vec+: a regression-based and network-bbased method to predict Drug-Target binding affinity using representation learning, graph mining, and machine learning
 
+Received: 10 December 2019                                      
+Accepted: 16 June 2020              
+Published: 29 June 2020
+
+
+----
+This code is implemented using Python 2.7.9, but since Python 2.7 will no longer supported after January 2020, It is upgraded to be run using Python 3.6
+
+For any qutions please contact the first author:
+
+
+  Maha Thafar
+
+Email: maha.thafar@kaust.edu.sa
+
+Computer, Electrical and Mathematical Sciences and Engineering Division (CEMSE), Computational Bioscience Research Center, Computer (CBRC), King Abdullah University of Science and Technology (KAUST) - Faculty of Computers and Information Technology, Taif University (TU)
+
+----
+
+## Getting Started
+
+### Prerequisites:
+
+There are several required Python packages to run the code:
+- gensim (for node2vec code)
+- numpy
+- Scikit-learn
+- imblearn
+- pandas
+
+These packages can be installed using pip or conda as the follwoing example
+```
+pip install -r requirements.txt
+```
+----
+
+### Files Description:
+#### *There are Three folders:*
+
+  **1.Input folder:** 
+  that includes four folder for 4 datasets include: 
+   - Nuclear Receptor dataset (nr),
+   - G-protein-coupled receptor (gpcr),
+   - Ion Channel (IC), 
+   - Enzyme (e)
+     which each one of them has all required data of drug-target interactions (in Adjacency matrix and edgelist format) and drug-drug and target-target similarities in (square matrix format) - all matrices include items names.
+  
+  **2.Embedding folder:**
+  that has also four folders coressponding for four datasets,
+     each folder contains the generated node2vec embeddings files for each fold of training data
+     
+  **3.Novel_DTIs folder:**
+  that has also four folders coressponding for four datasets, 
+     to write the novel DTIs (you should create directory for each dataset)
+  
+---
+#### *There are 10 files:*
+(Four main functions, one main for each dataset, and the other functions are same for all datasets which are imported in each main function)
+
+- **load_datasets.py** --> to read the input data including interactions and similarities
+- **get_Embedding_FV.py** --> to read the node2vec generated embedding and get the FV for each drug and target (CV random seed=22)
+- **training_functions.py** --> for several training and processing functions such as edgeList, Cosine_similarity, ..
+- **pathScores.py** --> to calculate and return all path scores for 6 path structures
+- **snf_code.py** --> Similarity Network Fusion functions
+- **GIP.py** --> to calculate and return gussian interaction profile similarity
+
+- **Four main functions**
+one for each dataset:
+> - DTIs_Main_nr.py
+> - DTIs_Main_gpcr.py
+> - DTIs_Main_ic.py
+> - DTIs_Main_enzyme.py
 
 ---
+## Installing:
+
+To get the development environment runining, the code get one parameter from the user which is the dataset name (the defual dataset is nr)
+run:
+
+```
+python DTIs_Main_nr.py --data nr
+```
+```
+python DTIs_Main_gpcr.py --data gpcr
+```
+```
+python DTIs_Main_ic.py --data ic
+```
+```
+python DTIs_Main_e.py --data e
+```
+
+------------------
 
 #### The repositery also provides an example of seq2seq and ProtVec code implemented inside the DTBA prediction code in the folder (DTBA_Embeddings)
 
@@ -19,21 +110,12 @@ Drug-target binding affinity prediction using representation learning, graph min
 ```
 python DTIs_Main.py
 ```
-
  
  #### *Note:*
  >  When you run the code the AUPR result could be a little bit different than the other code (DTIs_Main_ic.py) because of randomness in seq2seq when generates the embedding
  
 
+### For citation:
 ---
-
-#### For original node2vec code to generate new embeddings instead of reading generated embedding you can visit:
-
-(all details to run the code as well as required parameters are provided with node2vec source code)
-
-https://github.com/aditya-grover/node2vec
-
----
-
-### IF you use any part of this code please cite:
 Thafar, M.A., 
+---
