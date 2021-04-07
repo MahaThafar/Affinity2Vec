@@ -54,7 +54,7 @@ pip install -r requirements.txt
      which each one of them has all required data of drug-target binding affinity (in Adjacency matrix format), drug-drug and target-target similarities in (square matrix format), the drugs' SMILES in dictionary format with drugs' IDs, and the proteins' amino-acid sequences in dictionary format with proteins' IDs
   
   **2.Embedding folder:**
-  that has also two folders coressponding for two datasets,
+  that has two folders coressponding for 2 datasets,
      each folder contains the generated seq2seq embeddings for drugs, and generated ProtVec embeddings for proteins. 
   
 ---
@@ -62,34 +62,30 @@ pip install -r requirements.txt
 (two main functions, one main for each dataset, and the other functions are same for all datasets which are imported in each main function)
 
 - **load_datasets.py** -->  read the input data including binding affinityies, SMILES, Sequences, and similarities
-- **training_functions.py** --> for several training and processing functions such as edgeList, Cosine_similarity, ..
-- **pathScores.py** --> to calculate and return all path scores for 6 path structures
+- **training_functions.py** --> for several training and processing functions such as Cosine_similarity, normalization, etc.
+- **pathScores.py** --> to calculate and return all meta-path scores for 6 path structures
 - **evaluation.py** --> define all evalution metrics used in our experments.
 
 
-- **Four main functions**
+- **Two main functions**
 one for each dataset:
-> - DTIs_Main_nr.py
-> - DTIs_Main_gpcr.py
+> - Affinity2Vec_Davis.py
+> - Affinity2Vec_KIBA.py
 
 ---
 ## Installing:
 
-To get the development environment runining, the code get one parameter from the user which is the dataset name (the defual dataset is nr)
+To get the development environment runining, the code get 2 parameteres from the user which is the dataset name and the model version (the defual dataset is nr)
 run:
 
 ```
-python DTIs_Main_nr.py --data nr
+python Affinity2Vec_Davis.py --data Davis --model c
 ```
 ```
-python DTIs_Main_gpcr.py --data gpcr
+python Affinity2Vec_KIBA.py --data gpcr --model a
 ```
 ```
-python DTIs_Main_ic.py --data ic
-```
-```
-python DTIs_Main_e.py --data e
-```
+
 
 ------------------
 
@@ -100,7 +96,7 @@ python DTIs_Main_e.py --data e
 
  - To run this code:
 ```
-python DTIs_Main.py
+python Affinity2Vec_Davis_c.py
 ```
  
  #### *Note:*
