@@ -81,8 +81,8 @@ def main():
     DrPr_file = "Input/KIBA/kiba_binding_affinity_v2.txt"
     DrPr_Matrix = np.loadtxt(DrPr_file,dtype=np.float32 ,skiprows=0)
 
-    Dsim_file = "Input/KIBA/kiba_drug_sim.txt"
-    Dr_SimM = np.loadtxt(Dsim_file, dtype=np.float32 ,skiprows=0)
+    #Dsim_file = "Input/KIBA/kiba_drug_sim.txt"
+    #Dr_SimM = np.loadtxt(Dsim_file, dtype=np.float32 ,skiprows=0)
 
     Psim_file = "Input/KIBA/kiba_target_sim.txt"
     Pr_SimM = np.loadtxt(Psim_file, delimiter='\t',dtype=np.float32 ,skiprows=0)
@@ -123,7 +123,7 @@ def main():
 
     Pr_SimM = normalizedMatrix(Pr_SimM)
     Pr_SimM = keep_sim_threshold(Pr_SimM ,0.08)
-    Dr_SimM = keep_sim_threshold(Dr_SimM ,0.3)
+    #Dr_SimM = keep_sim_threshold(Dr_SimM ,0.3)
 
     Y = np.array(Y, dtype = np.float32)
     Y_nan = np.array(Y_nan, dtype = np.float32)
