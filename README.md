@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 
 ### Files Description:
-#### *There are Three folders:*
+#### *There are four folders:*
 
   **1.Input folder:** 
   that includes two folder for 2 datasets include: 
@@ -56,12 +56,18 @@ pip install -r requirements.txt
   **2.Embedding folder:**
   that has two folders coressponding for 2 datasets,
      each folder contains the generated seq2seq embeddings for drugs, and generated ProtVec embeddings for proteins. 
+     
+  **3.aupr folder:**
+  to convert the data first to binary and then calculate aupr evaluation metric
+  
+  **4.Code_to_generate_Embeddings folder:**
+  we add seq2seq model code and ProtVec model code that are necessory to generate the embeddings
+     
   
 ---
-#### *There are 8 files:*
+#### *There are 5 files:*
 (two main functions, one main for each dataset, and the other functions are same for all datasets which are imported in each main function)
 
-- **load_datasets.py** -->  read the input data including binding affinityies, SMILES, Sequences, and similarities
 - **training_functions.py** --> for several training and processing functions such as Cosine_similarity, normalization, etc.
 - **pathScores.py** --> to calculate and return all meta-path scores for 6 path structures
 - **evaluation.py** --> define all evalution metrics used in our experments.
@@ -79,10 +85,10 @@ To get the development environment runining, the code get 2 parameteres from the
 run:
 
 ```
-python Affinity2Vec_Davis.py --data Davis --model c
+python Affinity2Vec_Davis.py
 ```
 ```
-python Affinity2Vec_KIBA.py --data gpcr --model a
+python Affinity2Vec_KIBA.py
 ```
 ```
 
@@ -98,9 +104,6 @@ python Affinity2Vec_KIBA.py --data gpcr --model a
 ```
 python Affinity2Vec_Davis_c.py
 ```
- 
- #### *Note:*
- >  When you run the code the AUPR result could be a little bit different than the other code (DTIs_Main_ic.py) because of randomness in seq2seq when generates the embedding
  
 
 ### For citation:
