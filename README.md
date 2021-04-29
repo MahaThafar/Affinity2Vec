@@ -16,7 +16,7 @@ This code is implemented using Python 3.8.
 For any qutions please contact the first author:
 
 
-  Maha Thafar
+  Maha A. Thafar
 
 Email: maha.thafar@kaust.edu.sa
 
