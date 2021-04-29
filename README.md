@@ -93,7 +93,5 @@ python Affinity2Vec_KIBA.py
 ```
 
 
-------------------
-
 #### The repositery also provides an example of seq2seq and ProtVec code implemented inside the DTBA prediction code in the folder (DTBA_Embeddings)
 
