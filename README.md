@@ -97,16 +97,3 @@ python Affinity2Vec_KIBA.py
 
 #### The repositery also provides an example of seq2seq and ProtVec code implemented inside the DTBA prediction code in the folder (DTBA_Embeddings)
 
- ***About the folder (DTBA_Embeddings):***
- - This example is applied on Davis dataset
-
- - To run this code:
-```
-python Affinity2Vec_Davis_c.py
-```
- 
-
-### For citation:
----
-> Thafar, M.A., 
----
