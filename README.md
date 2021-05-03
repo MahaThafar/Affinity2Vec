@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 
 ### Files Description:
-#### *There are four folders:*
+#### *There are 5 folders:*
 
   **1.Input folder:** 
   that includes two folder for 2 datasets include: 
@@ -63,6 +63,9 @@ pip install -r requirements.txt
   
   **4.Code_to_generate_Embeddings folder:**
   we add seq2seq model code and ProtVec model code that are necessory to generate the embeddings
+  
+  **5. Predictions Figures:**
+  These two. figures represent the binding affinities predicted by Affinity2Vec best model vs. actual binding affinity values for Davis and KIBA datasets
      
   
 ---
