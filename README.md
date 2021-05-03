@@ -95,7 +95,7 @@ python Affinity2Vec_KIBA.py
 
 - *about the source code that we utilized to generate the drugs' SMILES embedding, please refere to the main source code:*
 
- - https://github.com/XericZephyr/seq2seq-fingerprint
+> https://github.com/XericZephyr/seq2seq-fingerprint
 
-> *about proteins' amio-acid sequences embeddings please refere to the main source code:*
+*about proteins' amio-acid sequences embeddings please refere to the main source code:*
 
