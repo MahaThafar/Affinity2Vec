@@ -36,6 +36,7 @@ There are several required Python packages to run the code:
 - deepchem
 - protVec
 - xgboost
+- pandas
 
 These packages can be installed using pip or conda as the follwoing example
 ```
