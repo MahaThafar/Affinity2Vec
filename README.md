@@ -51,8 +51,8 @@ pip install -r requirements.txt
   **1.Input folder:** 
   that includes two folder for 2 datasets include: 
    - Davis dataset,
-   - KIBA dataset
-     which each one of them has all required data of drug-target binding affinity (in Adjacency matrix format), drug-drug and target-target similarities in (square matrix format), the drugs' SMILES in dictionary format with drugs' IDs, and the proteins' amino-acid sequences in dictionary format with proteins' IDs
+   - KIBA dataset,
+   -  where each one of these folder has all required data of drug-target binding affinity (in Adjacency matrix format), drug-drug and target-target similarities in (square matrix format), the drugs' SMILES in dictionary format with drugs' IDs, and the proteins' amino-acid sequences in dictionary format with proteins' IDs
   
   **2.Embedding folder:**
   that has two folders coressponding for 2 datasets,
