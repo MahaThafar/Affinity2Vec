@@ -93,5 +93,9 @@ python Affinity2Vec_KIBA.py
 ```
 
 
-#### The repositery also provides an example of seq2seq and ProtVec code implemented inside the DTBA prediction code in the folder (DTBA_Embeddings)
+## For more details about the source code that we utilized to generate the drugs' SMILES embedding, please refere to the main source code:
+'''
+https://github.com/XericZephyr/seq2seq-fingerprint
+'''
+## and for more details of proteins' amio-acid sequences embeddings please refere to the main source code:
 
