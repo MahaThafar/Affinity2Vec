@@ -73,9 +73,9 @@ pip install -r requirements.txt
 - **pathScores.py** --> to calculate and return all meta-path scores for 6 path structures
 - **evaluation.py** --> define all evalution metrics used in our experments.
 
-- **2 main functions** one for each dataset:
-> - Affinity2Vec_Davis.py
-> - Affinity2Vec_KIBA.py
+- **2 main functions**, one for each dataset:
+> - **Affinity2Vec_Davis.py**
+> - **Affinity2Vec_KIBA.py**
 
 ---
 ## Installing:
