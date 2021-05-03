@@ -1,4 +1,4 @@
-# Affinity2Vec: Drug-Target Binding Affinity Prediction Method Developed using Representation Learning, Graph Mining, and Machine Learning Techniques
+# Affinity2Vec: Drug-Target Binding Affinity Prediction Method Developed using Representation Learning, Graph Mining, and Machine Learning
 
  
 #### This repositery provides an implementation of Affinity2Vec tool which is described in a research paper:
