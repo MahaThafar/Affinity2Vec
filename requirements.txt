@@ -1,0 +1,8 @@
+pandas
+xgboost
+gensim
+numpy
+Scikit-learn
+keras
+deepchem
+protVec
