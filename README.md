@@ -102,7 +102,7 @@ python Affinity2Vec_KIBA.py
 > https://github.com/ehsanasgari/Deep-Proteomics
 
 ---
-## For Citations:
+## To cite this work:
 > TBD
 
 
