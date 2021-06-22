@@ -92,6 +92,7 @@ def squared_error_zero(y_actual,y_pred):
 
     return 1 - (upp / float(down))
 #----------------------------------------------------
+
 def get_rm2(ys_orig,ys_line):
     
     r2 = r_squared_error(ys_orig, ys_line)
@@ -105,4 +106,4 @@ def pearson(y,f):
     rp = np.corrcoef(y, f)[0,1]
     return rp
 
-##################################################################
+###########################EOF#######################################
