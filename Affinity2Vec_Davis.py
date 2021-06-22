@@ -3,7 +3,7 @@
 ######################### Affinity2Vec Model Using Python ##########################
 #  First author:  maha.thafar@kaust.edu.sa
    
-# Done: March, 2021
+# Done: April, 2021
  
 # Description
 # This script predict drug-target binding affinity (DTBA) and evaluate the model using 4 evaluation metrics
