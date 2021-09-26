@@ -96,7 +96,17 @@ def keep_sim_threshold(simMat, threshold):
 
     return newMat
 #----------------------------------------------
+# Convert weighted edgelist into adjacency matrix
+def edgelist_to_adjMat(Wedgelist,ligDic,prDic):
 
+	adj = np.zeros((len(ligDic.keys()),len(prDic.keys())))
+	for element in Wedgelist:
+		i = ligDic[element[0]]
+		j = prDic[element[1]]
+		adj[i][j] = 1
+	return adj
+
+#------------------------------------------------
 #### Encoding Functions ###################
 ###########################################
 def integer_encoding(s,dic,maxLen):
