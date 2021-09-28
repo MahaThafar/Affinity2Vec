@@ -55,6 +55,31 @@ def get_aupr(Y, P,threshold):
     return aucpr
 
 #----------------------------------------------------
+def average_AUPRC(y,f):
+
+    """
+    Task:    To compute average area under the ROC curves (AUC) given ten
+             interaction threshold values from the pKd interval [6 M, 8 M]
+             to binarize pKd's into true class labels.
+    Input:   y      Vector with original labels (pKd [M])
+             f      Vector with predicted labels (pKd [M])
+    Output:  avAUC   average AUC
+    """
+
+    thr = np.linspace(6,7,10)
+    auc = np.empty(np.shape(thr)); auc[:] = np.nan
+
+    for i in range(len(thr)):
+        y_binary = copy.deepcopy(y)
+        y_binary = preprocessing.binarize(y_binary.reshape(1,-1), threshold=thr[i], copy=False)[0]
+        precision, recall, thresholds = metrics.precision_recall_curve(y_binary, f, pos_label=1)
+        auc[i] = metrics.auc(recall, precision)
+
+    avAUPR = np.mean(auc)
+
+    return avAUPR
+
+#------------------------------------------------------------------------------------------
 
 def r_squared_error(y_actual,y_pred):
     
