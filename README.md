@@ -64,12 +64,14 @@ pip install -r requirements.txt
   **4.Code_to_generate_Embeddings folder:**
   we add seq2seq model code and ProtVec model code that are necessory to generate the embeddings
   
-  **5. Predictions Figures:**
+  **5. Predictions Figures folder:**
   These two. figures represent the binding affinities predicted by Affinity2Vec best model vs. actual binding affinity values for Davis and KIBA datasets
      
+  **6. PDBBind_Refined folder:**
+  This folder has all materials related to PDBBind Refined dataset. It also has the generated embeddings for all Compounds' SMILES and Proteins' amino-acide sequences
   
 ---
-#### *There are 5 files:*
+#### *There are 6 files:*
 (two main functions, one main for each dataset, and the other functions are same for all datasets which are imported in each main function)
 
 - **training_functions.py** --> for several training and processing functions such as Cosine_similarity, normalization, etc.
@@ -80,6 +82,7 @@ pip install -r requirements.txt
 > - **Affinity2Vec_Davis.py**
 > - **Affinity2Vec_KIBA.py**
 
+> - **Jupyter noteboook for Affinity2Vec models using PDBBind Refined dataset**
 ---
 ## Installing:
 
