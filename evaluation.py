@@ -1,8 +1,14 @@
 # Evaluation metrics that used to assest the regressors and other metrics in main code
 
 import numpy as np
+from copy import deepcopy
+import copy
 import os
 import subprocess
+from math import sqrt
+from scipy import stats
+from sklearn import preprocessing, metrics
+print( subprocess.call(["ls", "-l"]))
 
 
 def mse(y,f):
