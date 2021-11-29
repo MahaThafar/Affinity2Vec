@@ -5,7 +5,7 @@
 
 > Affinity2Vec+ is a regression-based and network-based method
 
-Received: 20 April 2021                                      
+Received: 22 June 2021                                      
 Accepted:               
 Published: 
 
