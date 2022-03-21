@@ -3,9 +3,11 @@
  
 #### This repositery provides an implementation of Affinity2Vec tool which is described in a research paper:
 > Scientific Report Journal
+
 Received: 22 June 2021                                      
 Accepted:  08 March 2022             
 Published: 19 March 2022
+
 > https://doi.org/10.1038/s41598-022-08787-9
 
 ----
