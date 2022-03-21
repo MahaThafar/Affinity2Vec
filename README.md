@@ -6,9 +6,9 @@
 > Affinity2Vec+ is a regression-based and network-based method
 
 Received: 22 June 2021                                      
-Accepted:               
-Published: 
-
+Accepted:  08 March 2022             
+Published: 19 March 2022
+doi.org/10.1038/s41598-022-08787-9
 
 ----
 This code is implemented using Python 3.8.
@@ -107,6 +107,6 @@ python Affinity2Vec_KIBA.py
 
 ---
 ## To cite this work:
-> TBD
+Thafar, M.A., Alshahrani, M., Albaradei, S. et al. Affinity2Vec: drug-target binding affinity prediction through representation learning, graph mining, and machine learning. Sci Rep 12, 4751 (2022). https://doi.org/10.1038/s41598-022-08787-9
 
 
